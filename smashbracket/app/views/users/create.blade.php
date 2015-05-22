@@ -10,7 +10,7 @@
     @if ($errors->has())
         <div id="errors" class="alert alert-danger">
             @foreach ($errors->all() as $error)
-                {{ $error }}<br>        
+                {{ $error }}<br>
             @endforeach
         </div>
         @endif
@@ -20,15 +20,15 @@
 
     {{ Form::open(array('url' => 'create', 'class' => 'form-horizontal')) }}
       <div class="form-group">
-        <label for="inputEmail"  class="col-sm-2 control-label">Username</label>
-        <div class="col-sm-10">
-          <input type="text" name="username" class="form-control" id="username" placeholder="Username" {{ (Input::old('username')) ? ' value="' . e(Input::old('username')) . '"' : '' }}>
-        </div>
-      </div>
-      <div class="form-group">
         <label for="inputEmail"  class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
           <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" {{ (Input::old('email')) ? ' value="' . e(Input::old('email')) . '"' : '' }}>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail"  class="col-sm-2 control-label">Gamertag</label>
+        <div class="col-sm-10">
+          <input type="text" name="gamertag" class="form-control" id="gamertag" placeholder="Gamertag" {{ (Input::old('gamertag')) ? ' value="' . e(Input::old('gamertag')) . '"' : '' }}>
         </div>
       </div>
       <div class="form-group">
@@ -43,7 +43,7 @@
           <input type="password" name="password_confirm"  class="form-control" id="inputPassword" placeholder="Re-type Password">
         </div>
       </div>
-      
+
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default">Create Account</button>
