@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="inputEmail"  class="col-sm-2 control-label">Gamertag</label>
+        <label for="inputGamertag"  class="col-sm-2 control-label">Gamertag</label>
         <div class="col-sm-10">
           <input type="text" name="gamertag" class="form-control" id="gamertag" placeholder="Gamertag" {{ (Input::old('gamertag')) ? ' value="' . e(Input::old('gamertag')) . '"' : '' }}>
         </div>

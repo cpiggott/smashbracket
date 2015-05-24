@@ -22,6 +22,12 @@ Route::get('/signout', array(
 	)
 );
 
+Route::get('/tournament/create', array(
+	'as' => 'create-tournament',
+	'uses' => 'TournamentController@getCreateTournament'
+	)
+);
+
 
 
 /* Un-authenticated users */
